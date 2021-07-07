@@ -4,7 +4,7 @@ project(PCA6408A C)
 set(CMAKE_C_STANDARD 99)
 
 include(cpm/CPM.cmake)
-CPMAddPackage("gh:JeroenVandezande/LowLevelCInterfaces@1.0.6")
+CPMAddPackage("gh:JeroenVandezande/LowLevelCInterfaces@1.1.0")
 
 add_library(PCA6408A PCA6408A.c PCA6408A.h)
 
