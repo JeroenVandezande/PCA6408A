@@ -34,8 +34,8 @@ enum PCA6408A_Registers_t
 
 void PCA6408A_SetDeviceAddress(struct PCA6408A_t* instance, bool addrPinHigh)
 {
-	const uint8_t fixedpartofaddress = 0b00100000; //defined by the device manufacturer
-	instance->I2C_Address = addrPinHigh ? (fixedpartofaddress | 1) : fixedpartofaddress;
+	const uint8_t fixedpartofaddress = 0b01000000; //defined by the device manufacturer
+	instance->I2C_Address = addrPinHigh ? (fixedpartofaddress | 2) : fixedpartofaddress;
 }
 
 bool PCA6408A_WritePort(struct PCA6408A_t* instance, uint8_t data)
