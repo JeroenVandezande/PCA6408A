@@ -23,6 +23,11 @@
 #ifndef PCA6408A_LIBRARY_H
 #define PCA6408A_LIBRARY_H
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <stdbool.h>
 #include <stdint.h>
 #include "LL_i2c.h"
@@ -72,5 +77,9 @@ bool PCA6408A_ConfigurePort(struct PCA6408A_t* instance, uint8_t config);
 /// \param polarityConfig the port polarity configuration byte to be written to the port
 /// \return true if transaction was successful
 bool PCA6408A_ConfigurePortPolarity(struct PCA6408A_t* instance, uint8_t polarityConfig);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //PCA6408A_LIBRARY_H
